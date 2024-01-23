@@ -80,10 +80,13 @@ const testCases = asyncHandler(async (req, res) => {
   const localDate = new Date(dateString);
   console.log("Local Date: ", localDate);
   if (localDate == "Invalid Date") {
-    throw new ApiError(
-      400,
-      "Date String is not in valid ISO 8601 format!! Please enter valid date in ISO8601 format"
-    );
+    return res
+  .status(200)
+  .json(new ApiResponse(200,"Date String is not in valid ISO 8601 format!!","Failed")); 
+    // throw new ApiError(
+    //   400,
+    //   "Date String is not in valid ISO 8601 format!! Please enter valid date in ISO8601 format"
+    // );
   }
   const days = localDate.toLocaleDateString("en-US", { weekday: "long" });
   console.log("Day is: ", days);
@@ -113,7 +116,7 @@ const testCases = asyncHandler(async (req, res) => {
    const isNightShift = calendarShiftTime.some(shift => {
     const isShift = isNightTimeInRange(shift.startTime, shift.endTime, userTimeInSeconds);
     console.log("Bool is shift: ", isShift);
-    return isShift && (shift.shift === 'Night Shift');
+    return isShift && (shift.shiftStart === 'Night Shift');
   });
   console.log("Status Night shift: ", isNightShift)
 
@@ -155,7 +158,7 @@ let result
 if (matchingShift) {
   // Return shift Information
    result = {
-    shiftTiming: matchingShift.shift,
+    shiftStart: matchingShift.shiftStart,
     startTime: matchingShift.startTime,
     endTime: matchingShift.endTime
   };
@@ -167,7 +170,7 @@ if (matchingShift) {
   let nightDetails = calendarShiftTime[2];
   console.log("Night shift details: ", nightDetails)
   result = {
-    shiftTiming: nightDetails.shift,
+    shiftStart: nightDetails.shiftStart,
     startTime: nightDetails.startTime,
     endTime: nightDetails.endTime
   };

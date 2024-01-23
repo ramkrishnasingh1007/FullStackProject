@@ -48,7 +48,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
     if(days == 'Monday'){
        if(userTime >= 480 && userTime < 990 ){
         const result = {
-          shiftTiming: shiftTimeInArray[0].shift,
+          shiftStart: shiftTimeInArray[0].shiftStart,
           startTime: shiftTimeInArray[0].startTime,
           endTime: shiftTimeInArray[0].endTime
         }
@@ -57,7 +57,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
         .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
        }else if(userTime >= 990 && userTime > 90){
         const result = {
-          shiftTiming: shiftTimeInArray[1].shift,
+          shiftStart: shiftTimeInArray[1].shiftStart,
           startTime: shiftTimeInArray[1].startTime,
           endTime: shiftTimeInArray[1].endTime
         }
@@ -66,7 +66,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
         .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
        }else{
         const result = {
-          shiftTiming: shiftTimeInArray[2].shift,
+          shiftStart: shiftTimeInArray[2].shiftStart,
           startTime: shiftTimeInArray[2].startTime,
           endTime: shiftTimeInArray[2].endTime
         }
@@ -79,7 +79,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
     if(days == 'Tuesday'){
       if(userTime >= 480 && userTime < 990 ){
        const result = {
-         shiftTiming: shiftTimeInArray[0].shift,
+        shiftStart: shiftTimeInArray[0].shiftStart,
          startTime: shiftTimeInArray[0].startTime,
          endTime: shiftTimeInArray[0].endTime
        }
@@ -88,7 +88,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
        .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
       }else if(userTime >= 990 && userTime > 90){
        const result = {
-         shiftTiming: shiftTimeInArray[1].shift,
+        shiftStart: shiftTimeInArray[1].shiftStart,
          startTime: shiftTimeInArray[1].startTime,
          endTime: shiftTimeInArray[1].endTime
        }
@@ -97,7 +97,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
        .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
       }else{
        const result = {
-         shiftTiming: shiftTimeInArray[2].shift,
+        shiftStart: shiftTimeInArray[2].shiftStart,
          startTime: shiftTimeInArray[2].startTime,
          endTime: shiftTimeInArray[2].endTime
        }
@@ -110,7 +110,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
    if(days == 'Wednesday'){
     if(userTime >= 480 && userTime < 990 ){
      const result = {
-       shiftTiming: shiftTimeInArray[0].shift,
+      shiftStart: shiftTimeInArray[0].shiftStart,
        startTime: shiftTimeInArray[0].startTime,
        endTime: shiftTimeInArray[0].endTime
      }
@@ -119,7 +119,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
      .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
     }else if(userTime >= 990 && userTime > 90){
      const result = {
-       shiftTiming: shiftTimeInArray[1].shift,
+      shiftStart: shiftTimeInArray[1].shiftStart,
        startTime: shiftTimeInArray[1].startTime,
        endTime: shiftTimeInArray[1].endTime
      }
@@ -128,7 +128,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
      .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
     }else{
      const result = {
-       shiftTiming: shiftTimeInArray[2].shift,
+      shiftStart: shiftTimeInArray[2].shiftStart,
        startTime: shiftTimeInArray[2].startTime,
        endTime: shiftTimeInArray[2].endTime
      }
@@ -141,7 +141,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
  if(days == 'Thursday'){
   if(userTime >= 480 && userTime < 990 ){
    const result = {
-     shiftTiming: shiftTimeInArray[0].shift,
+    shiftStart: shiftTimeInArray[0].shiftStart,
      startTime: shiftTimeInArray[0].startTime,
      endTime: shiftTimeInArray[0].endTime
    }
@@ -150,7 +150,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
    .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
   }else if(userTime >= 990 && userTime > 90){
    const result = {
-     shiftTiming: shiftTimeInArray[1].shift,
+    shiftStart: shiftTimeInArray[1].shiftStart,
      startTime: shiftTimeInArray[1].startTime,
      endTime: shiftTimeInArray[1].endTime
    }
@@ -159,7 +159,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
    .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
   }else{
    const result = {
-     shiftTiming: shiftTimeInArray[2].shift,
+    shiftStart: shiftTimeInArray[2].shiftStart,
      startTime: shiftTimeInArray[2].startTime,
      endTime: shiftTimeInArray[2].endTime
    }
@@ -172,7 +172,7 @@ const calendar2Entry = asyncHandler(async (req, res) => {
 if(days == 'Friday'){
   if(userTime >= 480 && userTime < 930 ){
    const result = {
-     shiftTiming: shiftTimeInArray[0].shift,
+    shiftStart: shiftTimeInArray[0].shiftStart,
      startTime: shiftTimeInArray[0].startTime,
      endTime: shiftTimeInArray[0].endTime
    }
@@ -181,7 +181,7 @@ if(days == 'Friday'){
    .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
   }else if(userTime >= 930 && userTime > 30){
    const result = {
-     shiftTiming: shiftTimeInArray[1].shift,
+    shiftStart: shiftTimeInArray[1].shiftStart,
      startTime: shiftTimeInArray[1].startTime,
      endTime: shiftTimeInArray[1].endTime
    }
@@ -190,7 +190,7 @@ if(days == 'Friday'){
    .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
   }else{
    const result = {
-     shiftTiming: shiftTimeInArray[2].shift,
+    shiftStart: shiftTimeInArray[2].shiftStart,
      startTime: shiftTimeInArray[2].startTime,
      endTime: shiftTimeInArray[2].endTime
    }
@@ -203,7 +203,7 @@ if(days == 'Friday'){
 if(days == 'Saturday'){
   if(userTime >= 360 && userTime < 1080 ){
    const result = {
-     shiftTiming: shiftTimeInArray[0].shift,
+    shiftStart: shiftTimeInArray[0].shiftStart,
      startTime: shiftTimeInArray[0].startTime,
      endTime: shiftTimeInArray[0].endTime
    }
@@ -212,7 +212,7 @@ if(days == 'Saturday'){
    .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
   }else if(userTime >= 1080 && userTime > 360){
    const result = {
-     shiftTiming: shiftTimeInArray[1].shift,
+    shiftStart: shiftTimeInArray[1].shiftStart,
      startTime: shiftTimeInArray[1].startTime,
      endTime: shiftTimeInArray[1].endTime
    }
@@ -244,7 +244,7 @@ if(days == 'Saturday'){
  .then((result) =>{
   console.log("result is: ", result)
   const newresult = {
-    shift: result.shift,
+    shiftStart: result.shiftStart,
     startTime: result.startTime,
     endTime: result.endTime
   }
@@ -286,7 +286,7 @@ if(days == 'Saturday'){
  .then((result) =>{
   console.log("result is: ", result)
   const newresult = {
-    shift: result.shift,
+    shiftStart: result.shiftStart,
     startTime: result.startTime,
     endTime: result.endTime
   }
@@ -309,7 +309,7 @@ if(days == 'Saturday'){
 if(days == 'Sunday'){
   if(userTime >= 360 && userTime < 1080 ){
    const result = {
-     shiftTiming: shiftTimeInArray[0].shift,
+    shiftStart: shiftTimeInArray[0].shiftStart,
      startTime: shiftTimeInArray[0].startTime,
      endTime: shiftTimeInArray[0].endTime
    }
@@ -318,7 +318,7 @@ if(days == 'Sunday'){
    .json(new ApiResponse(200, result, days, "Shift Information fetched successfully")); 
   }else if(userTime >= 1080 && userTime > 360){
    const result = {
-     shiftTiming: shiftTimeInArray[1].shift,
+    shiftStart: shiftTimeInArray[1].shiftStart,
      startTime: shiftTimeInArray[1].startTime,
      endTime: shiftTimeInArray[1].endTime
    }

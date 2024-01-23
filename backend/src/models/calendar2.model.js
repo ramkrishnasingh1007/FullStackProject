@@ -7,17 +7,17 @@ const calendar2Schema = new Schema({
   },
   shiftTime: [
     {
-      shift: String,
+      shiftStart: String,
       startTime: String,
       endTime: String,
     },
     {
-      shift: String,
+      shiftStart: String,
       startTime: String,
       endTime: String,
     },
     {
-        shift: String,
+      shiftStart: String,
         startTime: String,
         endTime: String,
     },
