@@ -80,13 +80,13 @@ const testCases = asyncHandler(async (req, res) => {
   const localDate = new Date(dateString);
   console.log("Local Date: ", localDate);
   if (localDate == "Invalid Date") {
-    return res
-  .status(200)
-  .json(new ApiResponse(200,"Date String is not in valid ISO 8601 format!!","Failed")); 
-    // throw new ApiError(
-    //   400,
-    //   "Date String is not in valid ISO 8601 format!! Please enter valid date in ISO8601 format"
-    // );
+  //   return res
+  // .status(200)
+  // .json(new ApiResponse(200,"Date String is not in valid ISO 8601 format!!","Failed")); 
+    throw new ApiError(
+      400,
+      "Date String is not in valid ISO 8601 format!! Please enter valid date in ISO8601 format"
+    );
   }
   const days = localDate.toLocaleDateString("en-US", { weekday: "long" });
   console.log("Day is: ", days);
@@ -121,7 +121,7 @@ const testCases = asyncHandler(async (req, res) => {
   console.log("Status Night shift: ", isNightShift)
 
   //case of night shift but want value of start shift
-  let beforeMorningTime = 21600
+  let beforeMorningTime = 21600 //converting morning shift 6:00 into sec
   if(isNightShift == false && beforeMorningTime > userTimeInSeconds){
   let newDate = localDate.getDate()-1;
   console.log("New Date: ", newDate);

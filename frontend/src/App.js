@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import Calendar1 from './components/Calendar1';
-import Calendar2 from './components/Calendar2';
+import CombinedCalendar from './components/CombinedCalendar';
+import Footer from './components/Footer.jsx';
+import Navbar from './components/Navbar.jsx';
 
 function App() {
   return (
-    <div className='bg-cyan-500 h-full w-full'>
-      <Calendar1/>
-      <Calendar2/>
+    <div className='bg-gray-100 h-full w-full'>
+      
+      <Navbar/>
+      <CombinedCalendar/>
+    <Footer/>
     </div>
   );
 }
